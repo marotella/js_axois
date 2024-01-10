@@ -10,7 +10,7 @@
 */
 
 // CODE HERE
-
+const sayHelloButton = document.querySelector("#say-hello-button")
 
 // PROBLEM 2
 /*
@@ -21,6 +21,13 @@
 
 // CODE HERE
 
+function helloBtnBackground (){
+  // alert("test")
+  sayHelloButton.style.backgroundColor="black";
+  sayHelloButton.style.color="white";
+}
+
+sayHelloButton.addEventListener("mouseover", helloBtnBackground)
 
 // PROBLEM 3
 /*
