@@ -39,7 +39,12 @@ sayHelloButton.addEventListener("mouseover", helloBtnBackground)
 */
 
 // CODE HERE
+function helloBtnBackgroundReset () {
+  sayHelloButton.style.backgroundColor = "#EFEFEF";
+  sayHelloButton.style.color = "black";
+}
 
+sayHelloButton.addEventListener("mouseout", helloBtnBackgroundReset )
 
 // PROBLEM 4
 /*
@@ -60,7 +65,7 @@ const sayHello = () => {
 // DO NOT EDIT FUNCTION
 
 // CODE HERE
-
+sayHelloButton.addEventListener("click", sayHello )
 
 // PROBLEM 5
 /*
@@ -75,6 +80,9 @@ const sayHello = () => {
 
 const ohMy = () => {
   // YOUR CODE HERE
+  axios.get('http://localhost:3000/animals').then((res)=>{
+    console.log(res)
+  })
 }
 
 document.querySelector('#animals-button').addEventListener('click', ohMy)
